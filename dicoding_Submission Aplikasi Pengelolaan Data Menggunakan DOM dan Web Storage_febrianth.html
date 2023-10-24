@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Aplikasi Manajemen Buku</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Aplikasi Manajemen Buku</h1>
+      <p class="description">
+        Selamat datang di Aplikasi Manajemen Buku! Organisir dan kelola koleksi
+        buku Anda dengan lebih baik.
+      </p>
+      <button id="darkModeToggle" onclick="toggleDarkMode()" style="width: 20%">
+        Mode Gelap
+      </button>
+    </header>
+
+    <div class="container">
+      <div class="book-form">
+        <label for="bookTitle">Judul Buku </label>
+        <input type="text" id="bookTitle" placeholder="Masukkan judul buku" />
+
+        <label for="bookAuthor">Penulis </label>
+        <input
+          type="text"
+          id="bookAuthor"
+          placeholder="Masukkan penulis buku"
+        />
+
+        <label for="bookYear">Tahun Terbit </label>
+        <input type="number" id="bookYear" placeholder="Tahun terbit buku" />
+
+        <div class="label-and-checkbox">
+          <label for="isComplete">Selesai Dibaca</label>
+          <input type="checkbox" id="isComplete" />
+        </div>
+
+        <button onclick="addBook()">Tambah Buku</button>
+      </div>
+
+      <div class="search-section">
+        <label for="searchTitle" class="search-label">Cari Buku</label>
+        <input
+          type="text"
+          id="searchTitle"
+          class="search-input"
+          placeholder="Cari berdasarkan judul"
+        />
+        <button onclick="searchBooks()" class="search-button">Cari</button>
+      </div>
+
+      <div class="book-shelves">
+        <div class="book-shelf">
+          <h2>Belum selesai dibaca</h2>
+          <ul id="unfinishedBooks"></ul>
+        </div>
+
+        <div class="book-shelf">
+          <h2>Selesai dibaca</h2>
+          <ul id="finishedBooks"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">&copy; 2023 by Febrianth</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
